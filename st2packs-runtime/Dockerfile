@@ -1,7 +1,7 @@
 FROM alpine:3.8
 
-ONBUILD VOLUME ["/opt/stackstorm/packs", "/opt/stackstorm/virtualenvs"]
+ONBUILD VOLUME ["/opt/coditation/packs", "/opt/coditation/virtualenvs"]
 
 # Copy packs and virtualenvs
-ONBUILD COPY --from=builder /opt/stackstorm/packs /opt/stackstorm/packs
-ONBUILD COPY --from=builder /opt/stackstorm/virtualenvs /opt/stackstorm/virtualenvs
+ONBUILD COPY --from=builder /opt/coditation/packs /opt/coditation/packs
+ONBUILD COPY --from=builder /opt/coditation/virtualenvs /opt/coditation/virtualenvs
